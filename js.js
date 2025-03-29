@@ -1,41 +1,25 @@
 let turn=1;
 let way=0;
+let id_ai;
+
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
-  let id_ai;
-
 function randId(){
     let randnum=getRandomInt(1,9);    
-    if(randnum==1){
-        id_ai='left_top'
+    switch(randnum){
+        case 1: id_ai='left_top' break;
+        case 2: id_ai='center_top' break;
+        case 3: id_ai='right_top' break;
+        case 4: id_ai='left' break;
+        case 5: id_ai='center' break;
+        case 6: id_ai='right' break;
+        case 7: id_ai='left_bottom' break;
+        case 8: id_ai='center_bottom' break;
+        case 9: id_ai='right_bottom' break;
     }
-    if(randnum==2){
-        id_ai='center_top'
-     }
-     if(randnum==3){
-        id_ai='right_top'
-     }
-     if(randnum==4){
-        id_ai='left'
-     }
-     if(randnum==5){
-        id_ai='center'
-     }
-     if(randnum==6){
-        id_ai='right'
-     }
-     if(randnum==7){
-        id_ai='left_bottom'
-     }
-     if(randnum==8){
-        id_ai='center_bottom'
-     }
-     if(randnum==9){
-        id_ai='right_bottom'
-     }
     if(document.getElementById(id_ai).classList.contains('cross')||document.getElementById(id_ai).classList.contains('zero')){
         randId();
     }
