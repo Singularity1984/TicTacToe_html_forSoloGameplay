@@ -61,14 +61,14 @@ function AiTurn(){
         setTimeout(function(){ location.reload(); }, 500);}
     
     if(way==9){
-        alert('idk, 9999IQ gameplay')
+        alert('все клетки заняты, никто не победил')
         setTimeout(function(){ location.reload(); }, 500);}    
 }
 }
   function TicTacToe(id){
     if(turn==1){
        if(document.getElementById(id).classList.contains('cross')||document.getElementById(id).classList.contains('zero')){
-           alert('ERROR');
+           alert('Клетка уже занята');
        }
        else{
                document.getElementById(id).classList.add("cross")
@@ -91,7 +91,7 @@ function AiTurn(){
        setTimeout(function(){ location.reload(); }, 500);
    }
    else if(way==9){
-       alert('idk, 9999IQ gameplay')
+       alert('все клетки заняты, никто не победил')
        setTimeout(function(){ location.reload(); }, 500);}    
     else{
     AiTurn();
